@@ -13,6 +13,10 @@
 
 use App\FontSource;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/fonts', 'FontsController@index')->name('fonts.index');
+
+// TODO!
+# Route::get('/colors', 'ColorsController@inde')->name('colors.index');
+
+Route::get('/', 'HomeController@index')->name('home');

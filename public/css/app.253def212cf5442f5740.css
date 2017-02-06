@@ -10200,3 +10200,11 @@ a.text-gray-dark:hover {
     display: none !important;
   }
 }
+
+footer {
+  border-top: 1px solid #e5e5e5;
+  background: #f5f5f5;
+  font-size: 0.85rem;
+  color: #999;
+  padding: 1rem 0;
+}
