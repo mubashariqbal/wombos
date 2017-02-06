@@ -17,6 +17,51 @@ class FontsController extends Controller
 
 		$popularCombos = [
 			[
+				'name' => 'Montserrat and Open Sans',
+				'fonts' =>
+				[
+					'title' => 'Montserrat'
+				, 	'text' => 'Open Sans'
+				, 	'button' => 'Open Sans'
+				]
+			],
+			[
+				'name' => 'Playfair and Domine',
+				'fonts' =>
+				[
+					'title' => 'Playfair Display'
+				, 	'text' => 'Domine'
+				, 	'button' => 'Domine'
+				]
+			],			
+			[
+				'name' => 'Roboto and Noto Serif',
+				'fonts' =>
+				[
+					'title' => 'Roboto'
+				, 	'text' => 'Noto Serif'
+				, 	'button' => 'Noto Serif'
+				]
+			],			
+			[
+				'name' => 'Raleway and Roboto',
+				'fonts' =>
+				[
+					'title' => 'Raleway'
+				, 	'text' => 'Roboto'
+				, 	'button' => 'Roboto'
+				]
+			],
+			[
+				'name' => 'Lato and Merriweather',
+				'fonts' =>
+				[
+					'title' => 'Lato'
+				, 	'text' => 'Merriweather'
+				, 	'button' => 'Merriweather'
+				]
+			],
+			[
 				'name' => 'Cabin and Old Standard TT',
 				'fonts' =>
 				[
