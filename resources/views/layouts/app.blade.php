@@ -26,7 +26,7 @@
             <a class="nav-link" href="#">Fonts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="/about">About</a>
+            <a class="nav-link" href="/about">About</a>
           </li>
         </ul>
       </div>
