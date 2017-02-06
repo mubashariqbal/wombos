@@ -18,6 +18,11 @@ require('./bootstrap');
 //     el: '#app'
 // });
 
+$( document ).ready(function() {
+  $('#controls select').select2();
+});
+
+
 $( ".fonts-card-title-family" ).on( "change", function() {
 
 	var fontFamily =  $(this).val();

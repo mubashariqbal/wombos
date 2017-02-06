@@ -14,7 +14,7 @@
 				<select class="fonts-card-title-family form-control">
 					<option>Select Card Title Font</option>
 					@foreach($fontlist->items as $font)
-						<option>{{ $font->family }}</option>
+						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
@@ -22,7 +22,7 @@
 				<select class="fonts-card-text-family form-control">
 					<option>Select Card Text Font</option>
 					@foreach($fontlist->items as $font)
-						<option>{{ $font->family }}</option>
+						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
@@ -30,7 +30,7 @@
 				<select class="fonts-button-text-family form-control">
 					<option>Select Button Text Font</option>
 					@foreach($fontlist->items as $font)
-						<option>{{ $font->family }}</option>
+						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
