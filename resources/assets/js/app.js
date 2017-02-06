@@ -13,8 +13,22 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('example', require('./components/Example.vue'));
+// Vue.component('example', require('./components/Example.vue'));
+// const app = new Vue({
+//     el: '#app'
+// });
 
-const app = new Vue({
-    el: '#app'
+$( "#tester" ).on( "click", function() {
+	console.log('tester');
+	WebFont.load({
+		google: {
+			families: ['Lato']
+		}
+	});
+
+
+    $('.wombos-cs .card-title').css("font-family", 'Lato');
+
+	return false;
 });
+

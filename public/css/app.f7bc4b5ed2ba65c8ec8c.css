@@ -10201,8 +10201,30 @@ a.text-gray-dark:hover {
   }
 }
 
+body#fonts h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+body#fonts #controls {
+  padding: 1rem 0;
+}
+
+body#fonts .wombos-cs {
+  padding: 2rem 0;
+}
+
+body#fonts #light-cs {
+  background: #f3f3f3;
+}
+
+body#fonts #dark-cs {
+  background: #1a1a1a;
+  color: #fff;
+}
+
 footer {
-  margin-top: 2rem;
   border-top: 1px solid #e5e5e5;
   background: #f5f5f5;
   font-size: 0.85rem;

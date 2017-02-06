@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
   </head>
-  <body>
+  <body id="@yield('body-id', 'home')">
         
     <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
       <div class="container">
@@ -20,13 +20,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Fonts</a>
+            <a class="nav-link" href="/f">Fonts</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
+            <a class="nav-link" href="/a">About</a>
           </li>
         </ul>
       </div>
@@ -52,7 +52,7 @@
       </div>
     </footer>
 
-    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="{{ mix('/js/app.js') }}"></script>
   </body>
 </html>
