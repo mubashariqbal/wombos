@@ -4,12 +4,38 @@
 
 @section('content')
 
-
 <div id="controls">
 	<div class="container">
 		<h2>Controls</h2>
 
-		<a id="tester" class="btn btn-default" href="">Click me</a>
+		<form>
+		<div class="row">
+			<div class="col-md-4">
+				<select class="fonts-card-title-family form-control">
+					<option>Select Card Title Font</option>
+					@foreach($fontlist->items as $font)
+						<option>{{ $font->family }}</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="col-md-4">
+				<select class="fonts-card-text-family form-control">
+					<option>Select Card Text Font</option>
+					@foreach($fontlist->items as $font)
+						<option>{{ $font->family }}</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="col-md-4">
+				<select class="fonts-button-text-family form-control">
+					<option>Select Card Text Font</option>
+					@foreach($fontlist->items as $font)
+						<option>{{ $font->family }}</option>
+					@endforeach
+				</select>
+			</div>
+		</div>
+		</form>
 	</div>
 </div>
 

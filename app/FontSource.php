@@ -21,7 +21,7 @@ class FontSource {
 			$res = $client->request('GET', 'https://www.googleapis.com/webfonts/v1/webfonts?key='.$apiKey);
 			if ($res->getStatusCode() == 200) {
 				$body = $res->getBody();
-				$json = $body->getContents();
+				$json = json_decode($body->getContents());
 				return $json;
 			}
 		});

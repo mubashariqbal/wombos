@@ -4,12 +4,15 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\FontSource;
+
 class FontsController extends Controller
 {
 
 	public function index()
 	{
-		return view('fonts.index');
+		$fontlist = FontSource::getListOfGoogleFonts();
+		return view('fonts.index', compact('fontlist'));
 	}
 
 }

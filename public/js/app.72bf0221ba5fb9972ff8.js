@@ -11202,17 +11202,46 @@ __webpack_require__(31);
 //     el: '#app'
 // });
 
-$("#tester").on("click", function () {
-  console.log('tester');
-  WebFont.load({
-    google: {
-      families: ['Lato']
-    }
-  });
+$(".fonts-card-title-family").on("change", function () {
 
-  $('.wombos-cs .card-title').css("font-family", 'Lato');
+	var fontFamily = $(this).val();
+	WebFont.load({
+		google: {
+			families: [fontFamily]
+		}
+	});
 
-  return false;
+	$('.wombos-cs .card-title').css("font-family", fontFamily);
+
+	return false;
+});
+
+$(".fonts-card-text-family").on("change", function () {
+
+	var fontFamily = $(this).val();
+	WebFont.load({
+		google: {
+			families: [fontFamily]
+		}
+	});
+
+	$('.wombos-cs .card-text').css("font-family", fontFamily);
+
+	return false;
+});
+
+$(".fonts-button-text-family").on("change", function () {
+
+	var fontFamily = $(this).val();
+	WebFont.load({
+		google: {
+			families: [fontFamily]
+		}
+	});
+
+	$('.wombos-cs .button-text').css("font-family", fontFamily);
+
+	return false;
 });
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 

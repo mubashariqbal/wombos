@@ -18,16 +18,45 @@ require('./bootstrap');
 //     el: '#app'
 // });
 
-$( "#tester" ).on( "click", function() {
-	console.log('tester');
+$( ".fonts-card-title-family" ).on( "change", function() {
+
+	var fontFamily =  $(this).val();
 	WebFont.load({
 		google: {
-			families: ['Lato']
+			families: [ fontFamily ]
 		}
 	});
 
+    $('.wombos-cs .card-title').css("font-family",  fontFamily);
 
-    $('.wombos-cs .card-title').css("font-family", 'Lato');
+	return false;
+});
+
+$( ".fonts-card-text-family" ).on( "change", function() {
+
+	var fontFamily =  $(this).val();
+	WebFont.load({
+		google: {
+			families: [ fontFamily ]
+		}
+	});
+
+    $('.wombos-cs .card-text').css("font-family",  fontFamily);
+
+	return false;
+});
+
+
+$( ".fonts-button-text-family" ).on( "change", function() {
+
+	var fontFamily =  $(this).val();
+	WebFont.load({
+		google: {
+			families: [ fontFamily ]
+		}
+	});
+
+    $('.wombos-cs .button-text').css("font-family",  fontFamily);
 
 	return false;
 });
