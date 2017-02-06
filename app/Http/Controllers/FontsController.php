@@ -17,12 +17,21 @@ class FontsController extends Controller
 
 		$popularCombos = [
 			[
-				'name' => 'Lato, Lato, Lato',
+				'name' => 'Cabin and Old Standard TT',
 				'fonts' =>
 				[
-					'title' => 'Lato'
-				, 	'text' => 'Lato'
-				, 	'button' => 'Lato'
+					'title' => 'Cabin'
+				, 	'text' => 'Old Standard TT'
+				, 	'button' => 'Old Standard TT'
+				]
+			],
+			[
+				'name' => 'Fjalla One and Average',
+				'fonts' =>
+				[
+					'title' => 'Fjalla One'
+				, 	'text' => 'Average'
+				, 	'button' => 'Average'
 				]
 			]
 		];
