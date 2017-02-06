@@ -66,3 +66,35 @@ $( ".fonts-button-text-family" ).on( "change", function() {
 	return false;
 });
 
+$( ".font-popular-combos" ).on( "change", function() {
+
+	var titleFamily =  $(this).find(':selected').attr('data-title');
+	var textFamily =  $(this).find(':selected').attr('data-text');
+	var buttonFamily =  $(this).find(':selected').attr('data-button');
+
+	WebFont.load({
+		google: {
+			families: [ titleFamily ]
+		}
+	});
+
+	WebFont.load({
+		google: {
+			families: [ textFamily ]
+		}
+	});
+
+	WebFont.load({
+		google: {
+			families: [ buttonFamily ]
+		}
+	});
+
+    $('.wombos-cs .card-title').css("font-family",  titleFamily);
+    $('.wombos-cs .card-text, .wombos-cs li').css("font-family",  textFamily);
+    $('.wombos-cs .button-text').css("font-family",  buttonFamily);
+
+	return false;
+});
+
+

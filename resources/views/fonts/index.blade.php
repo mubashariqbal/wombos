@@ -37,7 +37,7 @@
 
 		<form>
 		<div class="row">
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<select class="fonts-card-title-family form-control">
 					<option>Select Card Title Font</option>
 					@foreach($fontlist->items as $font)
@@ -45,7 +45,7 @@
 					@endforeach
 				</select>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<select class="fonts-card-text-family form-control">
 					<option>Select Card Text Font</option>
 					@foreach($fontlist->items as $font)
@@ -53,11 +53,19 @@
 					@endforeach
 				</select>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-3">
 				<select class="fonts-button-text-family form-control">
 					<option>Select Button Text Font</option>
 					@foreach($fontlist->items as $font)
 						<option @if ($font->family == $buttonFont) selected="selected" @endif data-category="{{ $font->category }}">{{ $font->family }}</option>
+					@endforeach
+				</select>
+			</div>
+			<div class="col-md-3">
+				<select class="font-popular-combos form-control">
+					<option>Select Popular Combos</option>
+					@foreach($popularCombos as $combo) 
+						<option data-title="{{ $combo['fonts']['title'] }}" data-text="{{ $combo['fonts']['text'] }}"  data-button="{{ $combo['fonts']['button'] }}" >{{ $combo['name'] }}</option>
 					@endforeach
 				</select>
 			</div>
