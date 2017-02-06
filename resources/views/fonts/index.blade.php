@@ -28,7 +28,7 @@
 			</div>
 			<div class="col-md-4">
 				<select class="fonts-button-text-family form-control">
-					<option>Select Card Text Font</option>
+					<option>Select Button Text Font</option>
 					@foreach($fontlist->items as $font)
 						<option>{{ $font->family }}</option>
 					@endforeach
