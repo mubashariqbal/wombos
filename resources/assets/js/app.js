@@ -46,7 +46,7 @@ $( ".fonts-card-text-family" ).on( "change", function() {
 		}
 	});
 
-    $('.wombos-cs .card-text').css("font-family",  fontFamily);
+    $('.wombos-cs .card-text, .wombos-cs li').css("font-family",  fontFamily);
 
 	return false;
 });

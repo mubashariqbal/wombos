@@ -2,6 +2,33 @@
 
 @section('body-id', 'fonts')
 
+@section('footer-script')
+	@if ($titleFont != null && $textFont != null && $buttonFont != null)
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				WebFont.load({
+					google: {
+						families: [ {{ $titleFont }}, {{ $textFont }}, {{$buttonFont }} ]
+					}
+				});
+			});
+		</script>
+		<style type="text/css">
+		    .wombos-cs .card-title {
+		    	font-family: {{ $titleFont }};
+		    }
+
+		    .wombos-cs .card-text, .wombos-cs li {
+		    	font-family: {{ $textFont }};
+		    }
+
+		    .wombos-cs .button-text {
+		    	font-family: {{ $buttonFont }};
+		    }
+		</style>
+	@endif
+@endsection
+
 @section('content')
 
 <div id="controls">
@@ -14,7 +41,7 @@
 				<select class="fonts-card-title-family form-control">
 					<option>Select Card Title Font</option>
 					@foreach($fontlist->items as $font)
-						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
+						<option @if ($font->family == $titleFont) selected="selected" @endif data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
@@ -22,7 +49,7 @@
 				<select class="fonts-card-text-family form-control">
 					<option>Select Card Text Font</option>
 					@foreach($fontlist->items as $font)
-						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
+						<option @if ($font->family == $textFont) selected="selected" @endif data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
@@ -30,7 +57,7 @@
 				<select class="fonts-button-text-family form-control">
 					<option>Select Button Text Font</option>
 					@foreach($fontlist->items as $font)
-						<option data-category="{{ $font->category }}">{{ $font->family }}</option>
+						<option @if ($font->family == $buttonFont) selected="selected" @endif data-category="{{ $font->category }}">{{ $font->family }}</option>
 					@endforeach
 				</select>
 			</div>
