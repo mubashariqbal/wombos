@@ -9,7 +9,7 @@
         	{{-- Trying to find an aweseome Wombo Combo for fonts to use in your next web design? Look no further. --}}
         </p>
 
-        <p><a class="btn btn-primary" href="/fonts">Try Wombos Fonts</a></p>
+        <p><a class="btn btn-primary" href="/f">Try Wombos Fonts</a></p>
 
         <h2>Colors</h2>
 
